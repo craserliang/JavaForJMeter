@@ -73,7 +73,7 @@ public class RemoteShellExecutor {
              // Open a new {@link Session} on this connection
              Session session = conn.openSession();
              session.requestPTY("vt100", 80, 24, 640, 480, null);
-             Thread.sleep(1000);
+             Thread.sleep(5000);
              StringBuilder sb = new StringBuilder();
              // Execute a command on the remote machine.
              session.execCommand(cmds);
@@ -141,9 +141,9 @@ public class RemoteShellExecutor {
 	}
 	
 
-//    public static void main(String args[]) throws Exception {
-//      RemoteShellExecutor executor = new RemoteShellExecutor("172.16.0.78", "root", "Qcd0809@xw.");
-//      // 执行myTest.sh 参数为java Know dummy
-//      System.out.println(executor.exec("ifconfig"));
-//    }
+    public static void main(String args[]) throws Exception {
+      RemoteShellExecutor executor = new RemoteShellExecutor("172.16.0.78", "root", "Qcd0809@xw.");
+      // 执行myTest.sh 参数为java Know dummy
+      System.out.println(executor.exec("/home/ump5.3/simulateGate2/simgate.sh start"));
+    }
 }

@@ -45,9 +45,9 @@ public class ShellSampleGui extends AbstractSamplerGui{
 				BorderFactory.createEtchedBorder(), "Configure")); // 设置Panel的边框为带有蚀刻风格的边框线，并且带有名称
 		VerticalPanel configureVerticalPanel = new VerticalPanel(5, VerticalPanel.LEFT_ALIGNMENT); // 创建垂直对齐且左对齐的panel
 		JPanel configurePanel = new HorizontalPanel(); // 创建水平对齐的Panel
+		configurePanel.add(IPTextField);
 		configurePanel.add(UserTextField);
 		configurePanel.add(PasswordTextField);
-		configureVerticalPanel.add(IPTextField); // 将"service url"输入框添加到configureVerticalPanel中
 		configureVerticalPanel.add(configurePanel); // 将"xml file"输入框添加到configureVerticalPanel中
 		configureVerticalPanel.add(ComandTextField); // 将"xml file"输入框添加到configureVerticalPanel中
 		ShellConfigurePanel.add(configureVerticalPanel); // 将configureVerticalPanel添加到soapConfigurePanel中
